@@ -1,0 +1,30 @@
+.edit {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  min-width: 100vh;
+}
+
+.edit-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.edit-button {
+  padding: 15px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  opacity: 0.9;
+  border-radius: 3px;
+  letter-spacing: 2px;
+}
+
+.edit-button:hover {
+  opacity: 1;
+}

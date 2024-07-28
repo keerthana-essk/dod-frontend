@@ -1,0 +1,112 @@
+.home {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  min-width: 100vh;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.search-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 1s, background-color 0.2s;
+  width: 250px;
+  margin: 3px;
+  padding: 15px;
+  background: #e7e7e7;
+  color: orangered;
+}
+
+.search-input:focus {
+  background-color: #c5c5c5;
+  outline: none;
+}
+
+.search-input:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.search-button {
+  padding: 15px;
+  background-color: #000000;
+  color: white;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  opacity: 0.9;
+  border-radius: 3px;
+  letter-spacing: 2px;
+}
+
+.search-button:hover {
+  opacity: 1;
+}
+
+.logged-in-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.auth-button {
+  padding: 15px;
+  background-color: #000000;
+  color: white;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  opacity: 0.9;
+  border-radius: 3px;
+  letter-spacing: 2px;
+}
+
+.auth-button:hover {
+  opacity: 1;
+}
+
+.auth-button.login-button {
+  background-color: #007bff;
+}
+
+.auth-button.signup-button {
+  background-color: #28a745;
+}
+
+.auth-button.logout-button {
+  background-color: #dc3545;
+}
+
+.auth-button.edit-button {
+  background-color: #ffc107;
+}

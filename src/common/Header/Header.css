@@ -1,0 +1,21 @@
+.header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 3px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.home-icon {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
