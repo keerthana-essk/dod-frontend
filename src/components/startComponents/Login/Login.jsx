@@ -13,15 +13,18 @@ const Login = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3001/user/login", {
-        userName: userName,
-        password: password,
-      });
+      const response = await axios.post(
+        "https://dod-backend.vercel.app/user/login",
+        {
+          userName: userName,
+          password: password,
+        }
+      );
 
       if (response.status === 200) {
         setAccount(response.data.data);
         alert("Login success!!");
-        navigate('/');
+        navigate("/");
       } else {
         alert("Incorrect credentials");
       }

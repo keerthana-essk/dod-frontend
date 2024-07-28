@@ -18,14 +18,17 @@ const EditDomain = () => {
       return;
     }
     try {
-      const response = await axios.post("http://localhost:3001/user/editDomain", {
-        userName: account.userName,
-        enteredPassword: oldPassword,
-        newDomainName: domain,
-      });
+      const response = await axios.post(
+        "https://dod-backend.vercel.app/user/editDomain",
+        {
+          userName: account.userName,
+          enteredPassword: oldPassword,
+          newDomainName: domain,
+        }
+      );
       if (response.status === 200) {
         alert("Domain changed successfully");
-        navigate('/');
+        navigate("/");
       }
     } catch (err) {
       console.log("Internal error", err);

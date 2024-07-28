@@ -1,34 +1,37 @@
-import React, { useState } from 'react';
-import './EditUrl.css';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import { useAccountContext } from '../../../context/AccountContex';
+import React, { useState } from "react";
+import "./EditUrl.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useAccountContext } from "../../../context/AccountContex";
 
 const EditUrl = () => {
-  const [password, setPassword] = useState('');
-  const [newUrl, setNewUrl] = useState('');
-  const [reNewUrl, setReNewUrl] = useState('');
+  const [password, setPassword] = useState("");
+  const [newUrl, setNewUrl] = useState("");
+  const [reNewUrl, setReNewUrl] = useState("");
   const navigate = useNavigate();
   const { account } = useAccountContext();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (newUrl !== reNewUrl) {
-      alert('New URL and Re-enter New URL are not the same');
+      alert("New URL and Re-enter New URL are not the same");
       return;
     }
     try {
-      const response = await axios.post('http://localhost:3001/user/editUrl', {
-        userName: account.userName,
-        enteredPassword: password,
-        newUrl: newUrl,
-      });
+      const response = await axios.post(
+        "https://dod-backend.vercel.app/user/editUrl",
+        {
+          userName: account.userName,
+          enteredPassword: password,
+          newUrl: newUrl,
+        }
+      );
       if (response.status === 200) {
-        alert('URL changed successfully');
-        navigate('/');
+        alert("URL changed successfully");
+        navigate("/");
       }
     } catch (err) {
-      console.log('Internal error', err);
+      console.log("Internal error", err);
     }
   };
 

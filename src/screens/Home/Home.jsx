@@ -20,7 +20,7 @@ const Home = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3001/user/searchDomain",
+        "https://dod-backend.vercel.app/user/searchDomain",
         {
           domainName: searchedDomain,
         }

@@ -16,12 +16,15 @@ const Signup = (props) => {
       return;
     }
     try {
-      const response = await axios.post("http://localhost:3001/user/signup", {
-        userName: userName,
-        password: password,
-        domainName: domainName,
-        url: url,
-      });
+      const response = await axios.post(
+        "https://dod-backend.vercel.app/user/signup",
+        {
+          userName: userName,
+          password: password,
+          domainName: domainName,
+          url: url,
+        }
+      );
       console.log(response.data);
       alert("Signup success!!");
       props.onFormSwitch();
